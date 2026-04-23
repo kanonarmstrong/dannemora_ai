@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>dannemora — Ship features while you sleep</title>
+    <meta
+      name="description"
+      content="dannemora is an autonomous AI development team that picks up your Linear tickets, writes code, deploys to staging, and tests live endpoints."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Red+Hat+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">
+          <span class="logo__mark" aria-hidden="true"></span>
+          dannemora
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Open menu">☰</button>
+        <nav class="nav" id="site-nav">
+          <a href="index.html">Home</a>
+          <a href="index.html#how-it-works">How It Works</a>
+          <a href="pricing.html">Pricing</a>
+          <div class="nav__actions">
+            <a href="account.html">Sign In</a>
+            <a class="btn btn--primary get-started-cta" href="pricing.html">Get Started</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div>
+            <p class="eyebrow">The Autonomous Fortress</p>
+            <h1>Ship products while you sleep.</h1>
+            <p class="body-large" style="font-size: 1.125rem; max-width: 36rem">
+              dannemora is an autonomous AI development team that picks up your tickets, writes the code,
+              deploys to staging, and tests live endpoints — all without you lifting a finger.
+            </p>
+            <p style="margin-top: 1.5rem">
+              <a class="btn btn--primary get-started-cta" href="pricing.html">Get Started</a>
+            </p>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__visual-inner hero__visual-inner--image">
+              <img src="assets/images/autonomous-agent-mesh.png" alt="Autonomous agent mesh — Tech Lead · Developer · QA" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="agents">
+        <div class="container">
+          <div class="section__head">
+            <h2>Meet the Team</h2>
+            <p>A full autonomous cycle with security and guardrails built in.</p>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-row__content">
+              <span class="feature-badge">The Tech Lead</span>
+              <h3>The Orchestrator</h3>
+              <p>
+                Your Tech Lead watches for new tickets on your board. When you point it at a ticket, it analyzes the
+                requirements, sanitizes the input against prompt injection, and securely delegates the work to the
+                Developer. It coordinates the full cycle — delegation, deployment, QA verification, and ticket closure
+                — so you don't have to.
+              </p>
+            </div>
+            <div class="feature-row__visual feature-row__visual--image">
+              <img class="role-image-reveal" src="assets/images/the-tech-lead.png" alt="The Tech Lead" />
+            </div>
+          </div>
+
+          <div class="feature-row feature-row--reverse">
+            <div class="feature-row__content">
+              <span class="feature-badge">The Developer</span>
+              <h3>The Miracle Worker</h3>
+              <p>
+                The Developer takes tickets from the Tech Lead and gets to work. Writes code, pushes to your repo, and
+                signals when the build is ready for staging. It doesn't clone repos it shouldn't touch, doesn't deploy
+                to production, and doesn't exceed the cost guardrails you set. When QA finds a bug, the Developer gets
+                the encrypted fix request and tries again — up to five rounds before escalating to you.
+              </p>
+            </div>
+            <div class="feature-row__visual feature-row__visual--image">
+              <img class="role-image-reveal" src="assets/images/the-developer.png" alt="The Developer" />
+            </div>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-row__content">
+              <span class="feature-badge">The QA</span>
+              <h3>The Gatekeeper</h3>
+              <p>
+                Once you deploy code to your staging URL, the QA agent goes to work. It hits your live endpoints,
+                verifies responses against the acceptance criteria from the ticket, and reports a structured pass or
+                fail with evidence. If it fails, the encrypted ticket goes back to the Developer. If it passes, the
+                Tech Lead closes the ticket. QA never clones repos or runs servers — it only tests what's live.
+              </p>
+            </div>
+            <div class="feature-row__visual feature-row__visual--image">
+              <img class="role-image-reveal" src="assets/images/the-qa.png" alt="The QA" />
+            </div>
+          </div>
+
+          <div class="feature-row feature-row--reverse">
+            <div class="feature-row__content">
+              <span class="feature-badge">Security &amp; Guardrails</span>
+              <h3>Built for Production</h3>
+              <p>
+                Every message between agents is signed with industry-standard encryption and replay protection on a
+                durable bus. Agents fetch credentials at runtime from an encrypted secrets manager and each agent runs
+                in its own isolated container with role-specific security policies that prevent it from reading other
+                agents' data, deploying to production, or exceeding your cost limits. Set per-ticket, daily, and
+                monthly model spend caps. Your code, your keys, your infrastructure — nothing leaves your server.
+              </p>
+            </div>
+            <div class="feature-row__visual feature-row__visual--image">
+              <img class="role-image-reveal" src="assets/images/security-mailbox.png" alt="Locked box and public mailbox system" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" id="how-it-works" style="background: rgba(255, 255, 255, 0.02)">
+        <div class="container">
+          <div class="section__head">
+            <h2>How It Works</h2>
+          </div>
+          <div class="steps">
+            <article class="step-card">
+              <div class="step-card__num">1</div>
+              <h3>Subscribe</h3>
+              <p>Pick a plan and get your license key instantly.</p>
+            </article>
+            <article class="step-card">
+              <div class="step-card__num">2</div>
+              <h3>Install</h3>
+              <p>
+                Run the installer on your server. It sets up the team, infrastructure, and a dashboard. It then
+                walks you through chat setup so you can get to work.
+              </p>
+            </article>
+            <article class="step-card">
+              <div class="step-card__num">3</div>
+              <h3>Command</h3>
+              <p>
+                Message your TL with a ticket and watch the pipeline run: The Dev implements, pushes and deploys to
+                staging, QA verifies (or flags you for needed support), and closes the ticket.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-banner">
+            <h2>Ready to rip through your roadmaps?</h2>
+            <a class="btn btn--primary get-started-cta" href="pricing.html" style="margin-top: 2.25rem;">Get Started</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <div class="logo">
+            <span class="logo__mark" aria-hidden="true"></span>
+            dannemora
+          </div>
+          <p style="max-width: 280px; font-size: 0.9375rem">
+            An autonomous AI dev team — with guardrails you can trust.
+          </p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.75rem">Product</h4>
+          <p><a href="index.html#how-it-works">How It Works</a></p>
+          <p><a href="pricing.html">Pricing</a></p>
+          <p><a href="assets/legal/eula.pdf" target="_blank" rel="noopener">End User License Agreement</a></p>
+          <p><a href="assets/legal/notices.pdf" target="_blank" rel="noopener">Third-Party Software Notice</a></p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.75rem">Company</h4>
+          <p><a href="https://dannemora.ai" rel="noopener">dannemora.ai</a></p>
+          <p><a href="mailto:support@dannemora.ai">support@dannemora.ai</a></p>
+        </div>
+      </div>
+      <div class="container footer-meta">© 2026 dannemora. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

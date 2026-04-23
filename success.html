@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Success — dannemora</title>
+    <meta name="description" content="Post-purchase success page for dannemora onboarding." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Red+Hat+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">
+          <span class="logo__mark" aria-hidden="true"></span>
+          dannemora
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" style="padding-top: 3rem;">
+        <div class="container" style="max-width: 760px;">
+          <div class="text-center" style="margin-bottom: 2rem;">
+            <div style="display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:999px;background:rgba(115,208,185,0.2);margin-bottom:1rem;color:#73d0b9;font-size:1.5rem;">✓</div>
+            <h1 style="font-size: clamp(1.75rem, 3vw, 2.2rem); margin-bottom: 0.5rem;">You're in. Your team just got bigger.</h1>
+          </div>
+
+          <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 1.25rem;">
+            <img src="assets/images/autonomous-agent-mesh.png" alt="dannemora team together at the table" style="width:100%; display:block; object-fit:cover; max-height:320px;" />
+          </div>
+
+          <div class="card" style="margin-bottom: 1rem;">
+            <p style="font-size: 13px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem;">Setup takes about 30 minutes</p>
+
+            <div style="display:flex; flex-direction:column; gap:0.8rem;">
+              <div style="display:flex; gap:0.8rem; align-items:flex-start;">
+                <div style="width:28px;height:28px;border-radius:999px;background:rgba(2,91,207,0.2);color:#7eb2ff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">1</div>
+                <div>
+                  <p style="margin:0;color:var(--text);font-weight:600;font-size:15px;">Open your server session</p>
+                  <p style="margin:0;color:var(--text-muted);font-size:14px;">SSH into your machine and prepare to run the installer.</p>
+                </div>
+              </div>
+
+              <div style="display:flex; gap:0.8rem; align-items:flex-start;">
+                <div style="width:28px;height:28px;border-radius:999px;background:rgba(2,91,207,0.2);color:#7eb2ff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">2</div>
+                <div>
+                  <p style="margin:0;color:var(--text);font-weight:600;font-size:15px;">Run the installer</p>
+                  <pre style="margin:0.45rem 0 0;padding:0.85rem;border-radius:12px;background:var(--bg-elevated);border:1px solid var(--border);overflow-x:auto;color:var(--text);font-size:0.86rem;"><code>curl -fsSL https://dannemora.ai/install.sh | bash</code></pre>
+                </div>
+              </div>
+
+              <div style="display:flex; gap:0.8rem; align-items:flex-start;">
+                <div style="width:28px;height:28px;border-radius:999px;background:rgba(2,91,207,0.2);color:#7eb2ff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">3</div>
+                <div>
+                  <p style="margin:0;color:var(--text);font-weight:600;font-size:15px;">Paste your license key</p>
+                  <p style="margin:0;color:var(--text-muted);font-size:14px;">Follow the setup wizard and finish agent bootstrapping.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 1rem;">
+            <h2 style="font-size: 1.05rem; margin-bottom: 0.75rem;">Your License Key</h2>
+            <div class="license-box" style="margin-bottom: 0;">
+              <span id="license-key">DNM-XXXX-XXXX-XXXX</span>
+              <button type="button" class="btn btn--ghost" data-copy="#license-key">Copy to clipboard</button>
+            </div>
+          </div>
+
+          <p class="text-center" style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">
+            This page is part of the package and is shown post-purchase after checkout completion.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <div class="logo">
+            <span class="logo__mark" aria-hidden="true"></span>
+            dannemora
+          </div>
+          <p style="max-width: 280px; font-size: 0.9375rem">A high-performing, autonomous AI dev team—with guardrails you can trust.</p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.75rem">Product</h4>
+          <p><a href="index.html#how-it-works">How It Works</a></p>
+          <p><a href="pricing.html">Pricing</a></p>
+          <p><a href="assets/legal/eula.pdf" target="_blank" rel="noopener">End User License Agreement</a></p>
+          <p><a href="assets/legal/notices.pdf" target="_blank" rel="noopener">Third-Party Software Notices</a></p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.75rem">Company</h4>
+          <p><a href="https://dannemora.ai" rel="noopener">dannemora.ai</a></p>
+          <p><a href="mailto:support@dannemora.ai">support@dannemora.ai</a></p>
+        </div>
+      </div>
+      <div class="container footer-meta">© 2026 dannemora. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script>
+      (function () {
+        const API = 'https://api.dannemora.ai';
+        const params = new URLSearchParams(window.location.search);
+        const sessionId = params.get('session_id');
+        const keyEl = document.getElementById('license-key');
+
+        if (!sessionId || !keyEl) return;
+
+        keyEl.textContent = 'Retrieving your key…';
+
+        let attempts = 0;
+        const maxAttempts = 8;
+        const delayMs = 2500;
+
+        function fetchKey() {
+          attempts++;
+          fetch(`${API}/v1/license/retrieve?session_id=${encodeURIComponent(sessionId)}`)
+            .then((r) => {
+              if (!r.ok) throw new Error('not_ready');
+              return r.json();
+            })
+            .then((data) => {
+              if (data.license_key) {
+                keyEl.textContent = data.license_key;
+              } else {
+                throw new Error('no_key');
+              }
+            })
+            .catch(() => {
+              if (attempts < maxAttempts) {
+                setTimeout(fetchKey, delayMs);
+              } else {
+                keyEl.innerHTML =
+                  'Key not ready yet. <a href="account.html" style="color:var(--accent-lime)">Sign in to your account</a> to retrieve it, or check your email.';
+              }
+            });
+        }
+
+        fetchKey();
+      })();
+    </script>
+  </body>
+</html>

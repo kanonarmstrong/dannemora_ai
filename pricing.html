@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing — dannemora</title>
+    <meta name="description" content="dannemora monthly and annual plans. Three AI agents, secure message bus, Telegram, dashboard, and updates." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Red+Hat+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">
+          <span class="logo__mark" aria-hidden="true"></span>
+          dannemora
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Open menu">☰</button>
+        <nav class="nav" id="site-nav">
+          <a href="index.html">Home</a>
+          <a href="index.html#how-it-works">How It Works</a>
+          <a href="pricing.html">Pricing</a>
+          <div class="nav__actions">
+            <a href="account.html">Sign In</a>
+            <a class="btn btn--primary" href="#plans">Get Started</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" style="padding-bottom: 2rem">
+        <div class="container text-center">
+          <p class="eyebrow">Clear &amp; direct</p>
+          <h1>Pick your plan</h1>
+          <p style="max-width: 520px; margin: 0 auto; font-size: 1.125rem">
+            Everything needed to run a team with a hardened control plane.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight" id="plans">
+        <div class="container">
+          <div class="pricing-single">
+            <div class="price-card price-card--highlight">
+              <div class="billing-toggle" role="tablist" aria-label="Choose billing period">
+                <button type="button" class="is-active" data-billing-toggle="annual" role="tab" aria-selected="true">
+                  Annual
+                </button>
+                <button type="button" data-billing-toggle="monthly" role="tab" aria-selected="false">
+                  Monthly
+                </button>
+              </div>
+
+              <div class="price-card__savings" id="pricing-savings-badge">Best value: save ~$200/year on annual</div>
+
+              <div class="price-card__tier" id="pricing-tier">Annual</div>
+              <div class="price-card__price" id="pricing-amount">
+                <span class="price-card__primary-amount price-card__primary-amount--glow">$42</span><span style="font-size: 1rem; font-weight: 500">/mo</span>
+                <span class="price-card__billing">$499 billed annually</span>
+              </div>
+              <p class="price-card__note" id="pricing-note">Lowest effective monthly price for the same full feature set.</p>
+
+              <ul id="pricing-features">
+                <li>3 autonomous agents (TL, Dev, QA)</li>
+                <li>Secure durable message bus</li>
+                <li>Hardened security layer</li>
+                <li>Monitoring dashboard</li>
+                <li>Telegram bot integration</li>
+                <li>All future updates</li>
+              </ul>
+
+              <a
+                class="btn btn--primary btn--block"
+                id="pricing-subscribe-link"
+                href="https://buy.stripe.com/checkout-placeholder-annual"
+                target="_blank"
+                rel="noopener"
+                >Subscribe</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="text-center" style="margin-bottom: 2rem">Pricing FAQ</h2>
+          <div class="faq">
+            <details class="faq-item" open data-doc-item>
+              <summary>What happens if I cancel?</summary>
+              <p>
+                Your agents keep running for a 7-day grace period. After that, they go dormant. We never delete your
+                data—re-subscribe any time to wake them up. Just note that there may be up to a 24-hour delay between
+                re-subscribing and agents restarting.
+              </p>
+            </details>
+            <details class="faq-item" data-doc-item>
+              <summary>What are the hidden costs?</summary>
+              <p>
+                You’ll need your own LLM (Anthropic, OpenAI, etc.) API key to power the team. You'll only pay for
+                what the agents actually use.
+              </p>
+            </details>
+            <details class="faq-item" data-doc-item>
+              <summary>What API keys do I need?</summary>
+              <p>
+                We recommend Anthropic for the brains. Specifically, the latest Sonnet model is well suited for the
+                Tech Lead and QA, and the highest power Opus has worked well for the Developer. We have not tested
+                every possible combination, nor have we tested other models for these use cases. Please let us know
+                what is working well for you! Also, you're not locked into a model. We like Anthropic, but do you.
+              </p>
+            </details>
+            <details class="faq-item" data-doc-item>
+              <summary>What are the system requirements?</summary>
+              <p>
+                Each team requires a small VPS with Docker-friendly Linux, outbound HTTPS, and approximately 8GB of
+                RAM. See the setup manual for detailed specs.
+              </p>
+            </details>
+            <details class="faq-item" data-doc-item>
+              <summary>How much does it cost to run?</summary>
+              <p>
+                It depends. You can set monthly limits in-product and with the LLM provider to control costs.
+                However, ticket volume, project complexity, and a plethora of other factors influence cost.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <div class="logo">
+            <span class="logo__mark" aria-hidden="true"></span>
+            dannemora
+          </div>
+          <p style="max-width: 280px; font-size: 0.9375rem">Autonomous agents for your shipping loop.</p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.75rem">Product</h4>
+          <p><a href="index.html">Home</a></p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.75rem">Support</h4>
+          <p><a href="mailto:support@dannemora.ai">support@dannemora.ai</a></p>
+        </div>
+      </div>
+      <div class="container footer-meta">© 2026 dannemora. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

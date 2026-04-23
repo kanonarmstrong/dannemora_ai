@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Documentation — dannemora</title>
+    <meta
+      name="description"
+      content="Setup, daily usage, troubleshooting, and architecture for dannemora customers."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Red+Hat+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">
+          <span class="logo__mark" aria-hidden="true"></span>
+          dannemora
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Open menu">☰</button>
+        <nav class="nav" id="site-nav">
+          <a href="index.html">Home</a>
+          <a href="index.html#how-it-works">How It Works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="docs.html">Docs</a>
+          <div class="nav__actions">
+            <a href="account.html">Sign In</a>
+            <a class="btn btn--primary" href="pricing.html">Get Started</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" style="padding-bottom: 1rem">
+        <div class="container">
+          <p class="eyebrow">Reference hub</p>
+          <h1>Documentation</h1>
+          <p style="font-size: 1.125rem; max-width: 560px">
+            Organized by topic—setup, daily usage, troubleshooting, and architecture. Search to jump without
+            scrolling.
+          </p>
+          <div class="docs-search field" style="margin-top: 1.5rem">
+            <label for="docs-search">Search topics</label>
+            <input
+              class="input"
+              type="search"
+              id="docs-search"
+              placeholder="e.g. Redis, Telegram, RAM, installer…"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container" style="max-width: 800px">
+          <article class="docs-section" data-doc-item>
+            <h2 id="setup">Setup</h2>
+            <ul class="doc-link-list">
+              <li>
+                <a href="docs/getting-started.html"><strong>Getting started</strong> — full setup manual for first-timers.</a>
+              </li>
+              <li>
+                <a href="docs/dannemora.html"><strong>Project dannemora</strong> — add and isolate new applications.</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="docs-section" data-doc-item>
+            <h2 id="daily">Daily usage</h2>
+            <p>
+              Operate through Telegram: send your Tech Lead a Linear ticket link, watch status on the dashboard, and
+              review QA results on staging. Rotate API keys from the account page if needed.
+            </p>
+          </article>
+
+          <article class="docs-section" data-doc-item>
+            <h2 id="troubleshooting">Troubleshooting</h2>
+            <ul class="doc-link-list">
+              <li>
+                <a href="docs/troubleshooting.html"
+                  ><strong>Troubleshooting guide</strong> — bus listener not starting, agents not responding on Telegram, RAM pressure.</a
+                >
+              </li>
+            </ul>
+          </article>
+
+          <article class="docs-section" data-doc-item>
+            <h2 id="architecture">Architecture</h2>
+            <ul class="doc-link-list">
+              <li>
+                <a href="docs/architecture.html"
+                  ><strong>Architecture</strong> — Redis Streams bus, HMAC-signed messages, and how agents coordinate.</a
+                >
+              </li>
+            </ul>
+          </article>
+
+          <p style="margin-top: 2rem; font-size: 0.9375rem" data-doc-item>
+            Prefer raw Markdown in your repo? Mirror these pages as <code>.md</code> files and serve them with your docs
+            host—this site ships HTML for instant static hosting.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <div class="logo">
+            <span class="logo__mark" aria-hidden="true"></span>
+            dannemora
+          </div>
+          <p style="max-width: 280px; font-size: 0.9375rem">A high-performing, autonomous AI dev team—with guardrails you can trust.</p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.75rem">Product</h4>
+          <p><a href="index.html#how-it-works">How It Works</a></p>
+          <p><a href="pricing.html">Pricing</a></p>
+          <p><a href="assets/legal/eula.pdf" target="_blank" rel="noopener">End User License Agreement</a></p>
+          <p><a href="assets/legal/notices.pdf" target="_blank" rel="noopener">Third-Party Software Notices</a></p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.75rem">Company</h4>
+          <p><a href="https://dannemora.ai" rel="noopener">dannemora.ai</a></p>
+          <p><a href="mailto:support@dannemora.ai">support@dannemora.ai</a></p>
+        </div>
+      </div>
+      <div class="container footer-meta">© 2026 dannemora. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

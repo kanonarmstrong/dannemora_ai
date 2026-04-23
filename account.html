@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Account — dannemora</title>
+    <meta name="description" content="Sign in to manage your dannemora subscription, license key, and billing." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Red+Hat+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">
+          <span class="logo__mark" aria-hidden="true"></span>
+          dannemora
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Open menu">☰</button>
+        <nav class="nav" id="site-nav">
+          <a href="index.html">Home</a>
+          <a href="index.html#how-it-works">How It Works</a>
+          <a href="pricing.html">Pricing</a>
+          <div class="nav__actions">
+            <a href="account.html" aria-current="page">Sign In</a>
+            <a class="btn btn--primary" href="pricing.html">Get Started</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section__head" style="margin-bottom: 2rem">
+            <h1>Sign In</h1>
+            <p>Magic-link sign-in (no password needed). Manage your plan, license key, and billing from one place.</p>
+          </div>
+
+          <!-- Sign-in form (shown when not authenticated) -->
+          <div id="signin-view">
+            <div class="card" style="max-width: 480px; margin: 0 auto;">
+              <h2 style="font-size: 1.25rem; margin-bottom: 1rem">Sign in</h2>
+              <form id="magic-link-form">
+                <div class="field">
+                  <label for="signin-email">Email (from Stripe checkout)</label>
+                  <input class="input" type="email" id="signin-email" name="email" placeholder="you@company.com" required autocomplete="email" />
+                </div>
+                <button type="submit" class="btn btn--primary btn--block" id="magic-link-btn">Email me a magic link</button>
+              </form>
+              <div id="magic-link-sent" style="display:none; margin-top: 1rem; padding: 1rem; border-radius: var(--radius-sm); background: rgba(115,208,185,0.1); border: 1px solid rgba(115,208,185,0.3);">
+                <p style="margin:0; color: var(--accent-lime); font-weight: 600;">Check your email</p>
+                <p style="margin:0.5rem 0 0; font-size: 0.875rem;">We sent a sign-in link to <strong id="sent-to-email" style="color:var(--text)"></strong>. It expires in 10 minutes.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account dashboard (shown after magic-link verification) -->
+          <div id="account-view" style="display:none;">
+            <div class="account-layout">
+              <div class="card">
+                <p style="margin-bottom: 0.5rem"><span class="status-pill" id="account-status-pill">Active</span></p>
+                <p><strong style="color: var(--text)">Email:</strong> <span id="account-email"></span></p>
+                <p><strong style="color: var(--text)">Current Plan:</strong> <span id="account-plan"></span></p>
+                <p><strong style="color: var(--text)">Status:</strong> <span id="account-status"></span></p>
+                <p><strong style="color: var(--text)">Expires:</strong> <span id="account-expires"></span></p>
+
+                <h3 style="font-size: 1rem; margin: 1.5rem 0 0.75rem">Your License Key</h3>
+                <div class="license-box" style="margin-bottom: 0.75rem">
+                  <span id="account-license"></span>
+                  <button type="button" class="btn btn--ghost" data-copy="#account-license">Copy</button>
+                </div>
+                <p style="font-size: 0.8125rem; margin-bottom: 1rem">
+                  <strong>Important:</strong> Keep this key safe. You need it to install and run dannemora on your server.
+                  The key is stored in <code>~/.dannemora/.license</code> on your server.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3 style="font-size: 1rem; margin-bottom: 0.75rem;">Quick Reference</h3>
+                <p style="font-size: 0.875rem; margin-bottom: 1rem;">Install or reinstall dannemora:</p>
+                <pre style="padding:0.85rem;border-radius:12px;background:var(--bg-elevated);border:1px solid var(--border);overflow-x:auto;color:var(--text);font-size:0.86rem;margin-bottom:1rem;"><code>curl -fsSL https://dannemora.ai/install.sh | bash</code></pre>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">
+                  Need help? Email <a href="mailto:support@dannemora.ai">support@dannemora.ai</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <div class="logo">
+            <span class="logo__mark" aria-hidden="true"></span>
+            dannemora
+          </div>
+          <p style="max-width: 280px; font-size: 0.9375rem">A high-performing, autonomous AI dev team—with guardrails you can trust.</p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.75rem">Product</h4>
+          <p><a href="index.html#how-it-works">How It Works</a></p>
+          <p><a href="pricing.html">Pricing</a></p>
+          <p><a href="assets/legal/eula.pdf" target="_blank" rel="noopener">End User License Agreement</a></p>
+          <p><a href="assets/legal/notices.pdf" target="_blank" rel="noopener">Third-Party Software Notices</a></p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.75rem">Company</h4>
+          <p><a href="https://dannemora.ai" rel="noopener">dannemora.ai</a></p>
+          <p><a href="mailto:support@dannemora.ai">support@dannemora.ai</a></p>
+        </div>
+      </div>
+      <div class="container footer-meta">© 2026 dannemora. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script>
+      (function () {
+        const API = 'https://api.dannemora.ai';
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get('token');
+
+        // If we have a magic-link token, verify it and show account
+        if (token) {
+          fetch(`${API}/v1/auth/verify?token=${encodeURIComponent(token)}`)
+            .then((r) => {
+              if (!r.ok) throw new Error('Invalid or expired link. Please request a new one.');
+              return r.json();
+            })
+            .then((data) => {
+              showAccount(data);
+              // Clean the token from URL
+              window.history.replaceState({}, '', 'account.html');
+            })
+            .catch((e) => {
+              alert(e.message);
+            });
+          return;
+        }
+
+        // Magic-link form
+        const form = document.getElementById('magic-link-form');
+        if (form) {
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('signin-email').value.trim();
+            if (!email) return;
+
+            const btn = document.getElementById('magic-link-btn');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            try {
+              const resp = await fetch(`${API}/v1/auth/magic-link`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email }),
+              });
+              if (!resp.ok) throw new Error('Request failed');
+              document.getElementById('sent-to-email').textContent = email;
+              document.getElementById('magic-link-sent').style.display = 'block';
+              form.style.display = 'none';
+            } catch {
+              btn.textContent = 'Email me a magic link';
+              btn.disabled = false;
+              alert('Something went wrong. Please try again.');
+            }
+          });
+        }
+
+        function showAccount(data) {
+          document.getElementById('signin-view').style.display = 'none';
+          document.getElementById('account-view').style.display = 'block';
+
+          document.getElementById('account-email').textContent = data.email || '';
+          document.getElementById('account-license').textContent = data.license_key || '';
+
+          const planLabels = { monthly: 'Monthly ($59/mo)', annual: 'Annual ($499/yr)' };
+          document.getElementById('account-plan').textContent = planLabels[data.plan] || data.plan;
+
+          const statusLabels = { active: 'Active', past_due: 'Past Due', cancelled: 'Cancelled', expired: 'Expired' };
+          const statusEl = document.getElementById('account-status');
+          statusEl.textContent = statusLabels[data.status] || data.status;
+
+          const pill = document.getElementById('account-status-pill');
+          pill.textContent = statusLabels[data.status] || data.status;
+          if (data.status !== 'active') {
+            pill.style.background = 'rgba(248,113,113,0.2)';
+            pill.style.color = '#f87171';
+          }
+
+          if (data.expires_at) {
+            const d = new Date(data.expires_at);
+            document.getElementById('account-expires').textContent = d.toLocaleDateString('en-US', {
+              year: 'numeric', month: 'long', day: 'numeric',
+            });
+          }
+
+          // Re-init copy buttons for dynamically loaded content
+          document.querySelectorAll('[data-copy]').forEach((btn) => {
+            btn.onclick = async () => {
+              const target = btn.getAttribute('data-copy');
+              const el = target ? document.querySelector(target) : null;
+              const text = el ? el.textContent.trim() : '';
+              if (!text) return;
+              try {
+                await navigator.clipboard.writeText(text);
+                const prev = btn.textContent;
+                btn.textContent = 'Copied!';
+                setTimeout(() => { btn.textContent = prev; }, 2000);
+              } catch {}
+            };
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
